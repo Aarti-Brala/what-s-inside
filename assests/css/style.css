@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+}
+
+body {
+    background: #fff;
+    color: #1E0E62;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 40px 16px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    color: #1E0E62;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    min-width: 800px;
+}
+
+thead th {
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #15143966;
+    padding: 12px;
+}
+
+td {
+    padding: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1E0E62;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+/* 🟣 FULL background for odd rows (1st, 3rd, 5th) */
+tbody tr:nth-child(odd) td {
+    background-color: #EBEAED;
+    border-radius: 0;
+}
+
+/* Optional: rounded corners */
+tbody tr:nth-child(odd) td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+tbody tr:nth-child(odd) td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #eee;
+    }
+
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+
+    td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+        color: #151439;
+    }
+}
