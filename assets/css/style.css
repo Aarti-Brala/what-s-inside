@@ -28,6 +28,11 @@ body {
 
 .table-wrapper {
     overflow-x: auto;
+    color: #15143966;
+}
+
+.color{
+    color: #15143966;
 }
 
 table {
@@ -55,13 +60,13 @@ td {
     border-radius: 0;
 }
 
-/* 🟣 FULL background for odd rows (1st, 3rd, 5th) */
+
 tbody tr:nth-child(odd) td {
     background-color: #EBEAED;
     border-radius: 0;
 }
 
-/* Optional: rounded corners */
+
 tbody tr:nth-child(odd) td:first-child {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -72,7 +77,7 @@ tbody tr:nth-child(odd) td:last-child {
     border-bottom-right-radius: 10px;
 }
 
-/* ✅ Responsive */
+
 @media (max-width: 768px) {
 
     table,
